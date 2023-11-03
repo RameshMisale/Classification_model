@@ -1,0 +1,11 @@
+pillow
+numpy
+pandas
+seaborn
+datetime
+plotly
+matplotlib
+joblib
+streamlit
+scikit-learn
+requests
