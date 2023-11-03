@@ -16,7 +16,7 @@ adiponectin = st.sidebar.number_input("Adiponectin")
 resistin = st.sidebar.number_input("Resistin")
 mcp1 = st.sidebar.number_input("MCP.1")
 
-# Load your pre-trained regression model using pickle
+# Load your pre-trained classification model using pickle
 with open('Classification_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
@@ -35,5 +35,5 @@ input_data = pd.DataFrame({
 
 if st.sidebar.button("Predict"):
     # Make the prediction
-    predicted_price = model.predict(input_data)[0]
-    st.write(f"Prediction: {prediction:,.2f}")
+    predicted_class = model.predict(input_data)[0]
+    st.write(f"Prediction: {predicted_class}")
