@@ -36,4 +36,4 @@ input_data = pd.DataFrame({
 if st.sidebar.button("Predict"):
     # Make the prediction
     predicted_price = model.predict(input_data)[0]
-    st.write(f"Predicted: ${predicted_price:,.2f}")
+    st.write(f"Predicted: {predicted:,.2f}")
