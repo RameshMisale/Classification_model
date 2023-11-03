@@ -5,7 +5,7 @@ import pandas as pd
 st.title("Classification")
 
 # Create input fields for user input
-st.sidebar.title('Input Features')
+#st.sidebar.title('Input Features')
 age = st.sidebar.number_input("Age")
 bmi = st.sidebar.number_input("BMI")
 glucose = st.sidebar.number_input("Glucose")
