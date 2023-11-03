@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-st.title("House Price Prediction")
+st.title("Classification")
 
 # Create input fields for user input
 st.sidebar.header('Input Features')
