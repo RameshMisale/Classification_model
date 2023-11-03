@@ -2,13 +2,25 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-st.title("Classification")
+st.markdown("<h1 style='text-align: center;'>House Price Prediction</h1>", unsafe_allow_html=True)
 
-# Center the input features under the title
-col1, col2 = st.columns(2)
+# Center the input features under the title using HTML and CSS
+st.markdown(
+    """
+    <style>
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-# Create input fields for user input in the first column
-with col1:
+# Create input fields for user input in a centered container
+with st.container() as input_container:
     st.header('Input Features')
     age = st.number_input("Age")
     bmi = st.number_input("BMI")
@@ -37,9 +49,10 @@ input_data = pd.DataFrame({
     'MCP.1': [mcp1]
 })
 
-# Center the prediction under the input features
-with col2:
-    if st.button("Predict"):
-        # Make the prediction
-        predicted_class = model.predict(input_data)[0]
-        st.write(f"Prediction: {predicted_class}")
+# Center the prediction under the input features using HTML and CSS
+st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
+if st.button("Predict"):
+    # Make the prediction
+    predicted_class = model.predict(input_data)[0]
+    st.write(f"Prediction: {predicted_class}")
+st.markdown("</div>", unsafe_allow_html=True)
