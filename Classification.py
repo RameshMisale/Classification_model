@@ -5,7 +5,7 @@ import pandas as pd
 st.title("Classification")
 
 # Center the input features under the title
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 
 # Create input fields for user input in the first column
 with col1:
