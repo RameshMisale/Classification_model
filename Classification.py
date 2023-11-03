@@ -33,7 +33,7 @@ input_data = pd.DataFrame({
     'MCP.1': [mcp1]
 })
 
-if st.sidebar.button("Predict Price"):
+if st.sidebar.button("Predict"):
     # Make the prediction
     predicted_price = model.predict(input_data)[0]
-    st.write(f"Predicted Price: ${predicted_price:,.2f}")
+    st.write(f"Predicted: ${predicted_price:,.2f}")
